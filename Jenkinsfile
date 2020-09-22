@@ -1,13 +1,2 @@
-pipeline
-{
-agent any
-stages
-{
-stage('first step')
-{
-steps{
-bat"mvn clean install"
-}
-}
-}
-}
+@Library('shared-library@master') _ //master or whatever branch
+filterLogs ('WARNING', 1)
